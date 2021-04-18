@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E176A9FE26206DED0012CA0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176A9FD26206DED0012CA0C /* AppDelegate.swift */; };
-		E176AA0026206DED0012CA0C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E176A9FF26206DED0012CA0C /* GameScene.sks */; };
-		E176AA0226206DED0012CA0C /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E176AA0126206DED0012CA0C /* Actions.sks */; };
-		E176AA0426206DED0012CA0C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176AA0326206DED0012CA0C /* GameScene.swift */; };
-		E176AA0626206DED0012CA0C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E176AA0526206DED0012CA0C /* GameViewController.swift */; };
-		E176AA0926206DED0012CA0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E176AA0726206DED0012CA0C /* Main.storyboard */; };
-		E176AA0B26206DED0012CA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E176AA0A26206DED0012CA0C /* Assets.xcassets */; };
+		E1757C86262CA03900F26301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1757C85262CA03900F26301 /* AppDelegate.swift */; };
+		E1757C88262CA03900F26301 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1757C87262CA03900F26301 /* SceneDelegate.swift */; };
+		E1757C8A262CA03900F26301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1757C89262CA03900F26301 /* ViewController.swift */; };
+		E1757C8D262CA03900F26301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1757C8B262CA03900F26301 /* Main.storyboard */; };
+		E1757C8F262CA03A00F26301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1757C8E262CA03A00F26301 /* Assets.xcassets */; };
+		E1757C92262CA03A00F26301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1757C90262CA03A00F26301 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E176A9FA26206DED0012CA0C /* SchoolhouseSkateboarder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolhouseSkateboarder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E176A9FD26206DED0012CA0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E176A9FF26206DED0012CA0C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		E176AA0126206DED0012CA0C /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		E176AA0326206DED0012CA0C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		E176AA0526206DED0012CA0C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		E176AA0826206DED0012CA0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E176AA0A26206DED0012CA0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E176AA0C26206DED0012CA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1757C82262CA03900F26301 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1757C85262CA03900F26301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1757C87262CA03900F26301 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E1757C89262CA03900F26301 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1757C8C262CA03900F26301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1757C8E262CA03A00F26301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1757C91262CA03A00F26301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1757C93262CA03A00F26301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E176A9F726206DED0012CA0C /* Frameworks */ = {
+		E1757C7F262CA03900F26301 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,72 +37,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E176A9F126206DED0012CA0C = {
+		E1757C79262CA03900F26301 = {
 			isa = PBXGroup;
 			children = (
-				E176A9FC26206DED0012CA0C /* SchoolhouseSkateboarder */,
-				E176A9FB26206DED0012CA0C /* Products */,
+				E1757C84262CA03900F26301 /* Calculator */,
+				E1757C83262CA03900F26301 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E176A9FB26206DED0012CA0C /* Products */ = {
+		E1757C83262CA03900F26301 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E176A9FA26206DED0012CA0C /* SchoolhouseSkateboarder.app */,
+				E1757C82262CA03900F26301 /* Calculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E176A9FC26206DED0012CA0C /* SchoolhouseSkateboarder */ = {
+		E1757C84262CA03900F26301 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				E176A9FD26206DED0012CA0C /* AppDelegate.swift */,
-				E176A9FF26206DED0012CA0C /* GameScene.sks */,
-				E176AA0126206DED0012CA0C /* Actions.sks */,
-				E176AA0326206DED0012CA0C /* GameScene.swift */,
-				E176AA0526206DED0012CA0C /* GameViewController.swift */,
-				E176AA0726206DED0012CA0C /* Main.storyboard */,
-				E176AA0A26206DED0012CA0C /* Assets.xcassets */,
-				E176AA0C26206DED0012CA0C /* Info.plist */,
+				E1757C85262CA03900F26301 /* AppDelegate.swift */,
+				E1757C87262CA03900F26301 /* SceneDelegate.swift */,
+				E1757C89262CA03900F26301 /* ViewController.swift */,
+				E1757C8B262CA03900F26301 /* Main.storyboard */,
+				E1757C8E262CA03A00F26301 /* Assets.xcassets */,
+				E1757C90262CA03A00F26301 /* LaunchScreen.storyboard */,
+				E1757C93262CA03A00F26301 /* Info.plist */,
 			);
-			path = SchoolhouseSkateboarder;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E176A9F926206DED0012CA0C /* SchoolhouseSkateboarder */ = {
+		E1757C81262CA03900F26301 /* Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E176AA0F26206DED0012CA0C /* Build configuration list for PBXNativeTarget "SchoolhouseSkateboarder" */;
+			buildConfigurationList = E1757C96262CA03A00F26301 /* Build configuration list for PBXNativeTarget "Calculator" */;
 			buildPhases = (
-				E176A9F626206DED0012CA0C /* Sources */,
-				E176A9F726206DED0012CA0C /* Frameworks */,
-				E176A9F826206DED0012CA0C /* Resources */,
+				E1757C7E262CA03900F26301 /* Sources */,
+				E1757C7F262CA03900F26301 /* Frameworks */,
+				E1757C80262CA03900F26301 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SchoolhouseSkateboarder;
-			productName = SchoolhouseSkateboarder;
-			productReference = E176A9FA26206DED0012CA0C /* SchoolhouseSkateboarder.app */;
+			name = Calculator;
+			productName = Calculator;
+			productReference = E1757C82262CA03900F26301 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E176A9F226206DED0012CA0C /* Project object */ = {
+		E1757C7A262CA03900F26301 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					E176A9F926206DED0012CA0C = {
+					E1757C81262CA03900F26301 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = E176A9F526206DED0012CA0C /* Build configuration list for PBXProject "SchoolhouseSkateboarder" */;
+			buildConfigurationList = E1757C7D262CA03900F26301 /* Build configuration list for PBXProject "Calculator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,56 +109,63 @@
 				en,
 				Base,
 			);
-			mainGroup = E176A9F126206DED0012CA0C;
-			productRefGroup = E176A9FB26206DED0012CA0C /* Products */;
+			mainGroup = E1757C79262CA03900F26301;
+			productRefGroup = E1757C83262CA03900F26301 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E176A9F926206DED0012CA0C /* SchoolhouseSkateboarder */,
+				E1757C81262CA03900F26301 /* Calculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E176A9F826206DED0012CA0C /* Resources */ = {
+		E1757C80262CA03900F26301 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E176AA0926206DED0012CA0C /* Main.storyboard in Resources */,
-				E176AA0026206DED0012CA0C /* GameScene.sks in Resources */,
-				E176AA0B26206DED0012CA0C /* Assets.xcassets in Resources */,
-				E176AA0226206DED0012CA0C /* Actions.sks in Resources */,
+				E1757C92262CA03A00F26301 /* LaunchScreen.storyboard in Resources */,
+				E1757C8F262CA03A00F26301 /* Assets.xcassets in Resources */,
+				E1757C8D262CA03900F26301 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E176A9F626206DED0012CA0C /* Sources */ = {
+		E1757C7E262CA03900F26301 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E176AA0426206DED0012CA0C /* GameScene.swift in Sources */,
-				E176AA0626206DED0012CA0C /* GameViewController.swift in Sources */,
-				E176A9FE26206DED0012CA0C /* AppDelegate.swift in Sources */,
+				E1757C8A262CA03900F26301 /* ViewController.swift in Sources */,
+				E1757C86262CA03900F26301 /* AppDelegate.swift in Sources */,
+				E1757C88262CA03900F26301 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E176AA0726206DED0012CA0C /* Main.storyboard */ = {
+		E1757C8B262CA03900F26301 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E176AA0826206DED0012CA0C /* Base */,
+				E1757C8C262CA03900F26301 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E1757C90262CA03A00F26301 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1757C91262CA03A00F26301 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E176AA0D26206DED0012CA0C /* Debug */ = {
+		E1757C94262CA03A00F26301 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		E176AA0E26206DED0012CA0C /* Release */ = {
+		E1757C95262CA03A00F26301 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,38 +281,38 @@
 			};
 			name = Release;
 		};
-		E176AA1026206DED0012CA0C /* Debug */ = {
+		E1757C97262CA03A00F26301 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K285D3RL3;
-				INFOPLIST_FILE = SchoolhouseSkateboarder/Info.plist;
+				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.johnkostanov.test.SchoolhouseSkateboarder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnkostanov.test.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		E176AA1126206DED0012CA0C /* Release */ = {
+		E1757C98262CA03A00F26301 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K285D3RL3;
-				INFOPLIST_FILE = SchoolhouseSkateboarder/Info.plist;
+				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.johnkostanov.test.SchoolhouseSkateboarder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnkostanov.test.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E176A9F526206DED0012CA0C /* Build configuration list for PBXProject "SchoolhouseSkateboarder" */ = {
+		E1757C7D262CA03900F26301 /* Build configuration list for PBXProject "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E176AA0D26206DED0012CA0C /* Debug */,
-				E176AA0E26206DED0012CA0C /* Release */,
+				E1757C94262CA03A00F26301 /* Debug */,
+				E1757C95262CA03A00F26301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E176AA0F26206DED0012CA0C /* Build configuration list for PBXNativeTarget "SchoolhouseSkateboarder" */ = {
+		E1757C96262CA03A00F26301 /* Build configuration list for PBXNativeTarget "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E176AA1026206DED0012CA0C /* Debug */,
-				E176AA1126206DED0012CA0C /* Release */,
+				E1757C97262CA03A00F26301 /* Debug */,
+				E1757C98262CA03A00F26301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E176A9F226206DED0012CA0C /* Project object */;
+	rootObject = E1757C7A262CA03900F26301 /* Project object */;
 }
