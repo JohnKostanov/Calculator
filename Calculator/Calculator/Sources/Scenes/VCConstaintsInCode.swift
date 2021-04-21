@@ -17,17 +17,23 @@ class VCConstaintsInCode: UIViewController {
         return label
     }()
     
-    private lazy var buttonDivision = createButton(with: "÷", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
-    private lazy var buttonMultiplication = createButton(with: "X", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
-    private lazy var buttonSubtraction = createButton(with: "−", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
-    private lazy var buttonPlus = createButton(with: "﹢", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
-    private lazy var buttonEqually = createButton(with: "﹦", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
+    private lazy var buttonDivision = createButton(with: "÷", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
+    private lazy var buttonMultiplication = createButton(with: "X", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
+    private lazy var buttonSubtraction = createButton(with: "−", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
+    private lazy var buttonPlus = createButton(with: "﹢", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
+    private lazy var buttonEqually = createButton(with: "﹦", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
     
-    private lazy var buttonProcent = createButton(with: "％", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2)
-    private lazy var buttonNine = createButton(with: "9", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
-    private lazy var buttonSix = createButton(with: "6", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
-    private lazy var buttonThree = createButton(with: "3", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
-    private lazy var buttonComma = createButton(with: ",", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
+    private lazy var buttonProcent = createButton(with: "％", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2, multiplier: 1)
+    private lazy var buttonNine = createButton(with: "9", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonSix = createButton(with: "6", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonThree = createButton(with: "3", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonComma = createButton(with: ",", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    
+    private lazy var buttonPlusAndMinus = createButton(with: "+/-", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2, multiplier: 1)
+    private lazy var buttonEight = createButton(with: "8", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonFive = createButton(with: "5", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonTwo = createButton(with: "2", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonZero = createButton(with: "0", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 2)
     
     private lazy var centerY: CGFloat = {
         view.frame.height/2
@@ -67,6 +73,12 @@ class VCConstaintsInCode: UIViewController {
         view.addSubview(buttonSix)
         view.addSubview(buttonThree)
         view.addSubview(buttonComma)
+        
+        view.addSubview(buttonPlusAndMinus)
+        view.addSubview(buttonEight)
+        view.addSubview(buttonFive)
+        view.addSubview(buttonTwo)
+        view.addSubview(buttonZero)
     }
     
     private func setupLayout() {
@@ -114,6 +126,25 @@ class VCConstaintsInCode: UIViewController {
         buttonComma.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -110).isActive = true
         buttonComma.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start).isActive = true
         
+        buttonPlusAndMinus.translatesAutoresizingMaskIntoConstraints = false
+        buttonPlusAndMinus.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -180).isActive = true
+        buttonPlusAndMinus.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 280).isActive = true
+        
+        buttonEight.translatesAutoresizingMaskIntoConstraints = false
+        buttonEight.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -180).isActive = true
+        buttonEight.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 210).isActive = true
+        
+        buttonFive.translatesAutoresizingMaskIntoConstraints = false
+        buttonFive.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -180).isActive = true
+        buttonFive.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 140).isActive = true
+        
+        buttonTwo.translatesAutoresizingMaskIntoConstraints = false
+        buttonTwo.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -180).isActive = true
+        buttonTwo.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 70).isActive = true
+        
+        buttonZero.translatesAutoresizingMaskIntoConstraints = false
+        buttonZero.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -210).isActive = true
+        buttonZero.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start).isActive = true
     }
     
     private func setupView() {
@@ -122,7 +153,7 @@ class VCConstaintsInCode: UIViewController {
 
 
 }
-private func createButton(with title: String, titleColor: UIColor, backgroundColor: UIColor) -> UIButton {
+private func createButton(with title: String, titleColor: UIColor, backgroundColor: UIColor, multiplier: CGFloat) -> UIButton {
     let button = UIButton(type: .system)
     button.setTitle(title, for: .normal)
     button.setTitleColor(titleColor, for: .normal)
@@ -130,7 +161,7 @@ private func createButton(with title: String, titleColor: UIColor, backgroundCol
     button.backgroundColor = backgroundColor
     button.layer.masksToBounds = true
     button.layer.cornerRadius = 30
-    button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: 1).isActive = true
+    button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: multiplier).isActive = true
     return button
 }
 
