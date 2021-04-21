@@ -33,7 +33,12 @@ class VCConstaintsInCode: UIViewController {
     private lazy var buttonEight = createButton(with: "8", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
     private lazy var buttonFive = createButton(with: "5", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
     private lazy var buttonTwo = createButton(with: "2", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonZero = createButton(with: "0", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 2)
+    private lazy var buttonZero = createButton(with: "0", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 2.2)
+    
+    private lazy var buttonC = createButton(with: "C", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2, multiplier: 1)
+    private lazy var buttonSeven = createButton(with: "7", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonFour = createButton(with: "4", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonOne = createButton(with: "1", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
     
     private lazy var centerY: CGFloat = {
         view.frame.height/2
@@ -79,6 +84,11 @@ class VCConstaintsInCode: UIViewController {
         view.addSubview(buttonFive)
         view.addSubview(buttonTwo)
         view.addSubview(buttonZero)
+        
+        view.addSubview(buttonC)
+        view.addSubview(buttonSeven)
+        view.addSubview(buttonFour)
+        view.addSubview(buttonOne)
     }
     
     private func setupLayout() {
@@ -143,8 +153,24 @@ class VCConstaintsInCode: UIViewController {
         buttonTwo.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 70).isActive = true
         
         buttonZero.translatesAutoresizingMaskIntoConstraints = false
-        buttonZero.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -210).isActive = true
+        buttonZero.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -215).isActive = true
         buttonZero.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start).isActive = true
+        
+        buttonC.translatesAutoresizingMaskIntoConstraints = false
+        buttonC.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -250).isActive = true
+        buttonC.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 280).isActive = true
+        
+        buttonSeven.translatesAutoresizingMaskIntoConstraints = false
+        buttonSeven.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -250).isActive = true
+        buttonSeven.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 210).isActive = true
+        
+        buttonFour.translatesAutoresizingMaskIntoConstraints = false
+        buttonFour.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -250).isActive = true
+        buttonFour.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 140).isActive = true
+        
+        buttonOne.translatesAutoresizingMaskIntoConstraints = false
+        buttonOne.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -250).isActive = true
+        buttonOne.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 70).isActive = true
     }
     
     private func setupView() {
@@ -157,7 +183,7 @@ private func createButton(with title: String, titleColor: UIColor, backgroundCol
     let button = UIButton(type: .system)
     button.setTitle(title, for: .normal)
     button.setTitleColor(titleColor, for: .normal)
-    button.titleLabel?.font = .systemFont(ofSize: 40, weight: .bold)
+    button.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
     button.backgroundColor = backgroundColor
     button.layer.masksToBounds = true
     button.layer.cornerRadius = 30
