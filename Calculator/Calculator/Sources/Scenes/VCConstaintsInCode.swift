@@ -8,22 +8,64 @@
 import UIKit
 
 class VCConstaintsInCode: UIViewController {
+    
+    private lazy var label: UILabel = {
+        var label = UILabel()
+        label.font = .systemFont(ofSize: Metric.labelFontSize)
+        label.text = Strings.labelText
+        label.textColor = Color.labelTextColor
+        return label
+    }()
+    
+    
+    private lazy var centerY: CGFloat = {
+        view.frame.height/2
+    }()
+
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupHierarchy()
+        setupLayout()
+        setupView()
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Settings
+    
+    private func setupHierarchy() {
+        view.addSubview(label)
     }
-    */
+    
+    private func setupLayout() {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.topAnchor, constant: centerY/2).isActive = true
+        
+    }
+    
+    private func setupView() {
+        view.backgroundColor = Color.backgroundColor
+    }
 
+
+}
+
+ 
+extension VCConstaintsInCode {
+    enum Metric {
+        static let labelFontSize: CGFloat = 60
+    }
+    enum Strings {
+        static let labelText = "0"
+    }
+    enum Color {
+        static let backgroundColor: UIColor = .black
+        static let labelTextColor: UIColor = .white
+    }
+    enum Constraints {
+        static let labelXAnchor = -30
+     
+    }
 }
