@@ -23,6 +23,12 @@ class VCConstaintsInCode: UIViewController {
     private lazy var buttonPlus = createButton(with: "﹢", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
     private lazy var buttonEqually = createButton(with: "﹦", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons)
     
+    private lazy var buttonProcent = createButton(with: "％", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2)
+    private lazy var buttonNine = createButton(with: "9", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
+    private lazy var buttonSix = createButton(with: "6", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
+    private lazy var buttonThree = createButton(with: "3", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
+    private lazy var buttonComma = createButton(with: ",", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3)
+    
     private lazy var centerY: CGFloat = {
         view.frame.height/2
     }()
@@ -55,6 +61,12 @@ class VCConstaintsInCode: UIViewController {
         view.addSubview(buttonSubtraction)
         view.addSubview(buttonPlus)
         view.addSubview(buttonEqually)
+        
+        view.addSubview(buttonProcent)
+        view.addSubview(buttonNine)
+        view.addSubview(buttonSix)
+        view.addSubview(buttonThree)
+        view.addSubview(buttonComma)
     }
     
     private func setupLayout() {
@@ -81,6 +93,26 @@ class VCConstaintsInCode: UIViewController {
         buttonEqually.translatesAutoresizingMaskIntoConstraints = false
         buttonEqually.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
         buttonEqually.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start).isActive = true
+        
+        buttonProcent.translatesAutoresizingMaskIntoConstraints = false
+        buttonProcent.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -110).isActive = true
+        buttonProcent.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 280).isActive = true
+        
+        buttonNine.translatesAutoresizingMaskIntoConstraints = false
+        buttonNine.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -110).isActive = true
+        buttonNine.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 210).isActive = true
+        
+        buttonSix.translatesAutoresizingMaskIntoConstraints = false
+        buttonSix.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -110).isActive = true
+        buttonSix.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 140).isActive = true
+        
+        buttonThree.translatesAutoresizingMaskIntoConstraints = false
+        buttonThree.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -110).isActive = true
+        buttonThree.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start - 70).isActive = true
+        
+        buttonComma.translatesAutoresizingMaskIntoConstraints = false
+        buttonComma.centerXAnchor.constraint(equalTo: view.trailingAnchor, constant: -110).isActive = true
+        buttonComma.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: Constraints.start).isActive = true
         
     }
     
@@ -114,7 +146,10 @@ extension VCConstaintsInCode {
         static let backgroundColor: UIColor = .black
         static let labelTextColor: UIColor = .white
         static let titleColorButton: UIColor = .white
+        static let titleColorButton2: UIColor = .black
         static let backgroundColorButtons: UIColor = .systemOrange
+        static let backgroundColorButtons2: UIColor = .systemGray5
+        static let backgroundColorButtons3: UIColor = .darkGray
     }
     enum Constraints {
         static let start: CGFloat = -50
