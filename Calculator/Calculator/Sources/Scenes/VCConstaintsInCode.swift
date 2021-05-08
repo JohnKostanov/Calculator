@@ -12,40 +12,40 @@ class VCConstaintsInCode: UIViewController {
     private lazy var label: UILabel = {
         var label = UILabel()
         label.font = .systemFont(ofSize: Metric.labelFontSize)
-        label.text = Strings.labelText
-        label.textColor = Color.labelTextColor
+        label.text = Strings.zero
+        label.textColor = .white
         return label
     }()
     
-    private lazy var buttonDivision = createButton(with: "÷", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
-    private lazy var buttonMultiplication = createButton(with: "X", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
-    private lazy var buttonSubtraction = createButton(with: "−", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
-    private lazy var buttonPlus = createButton(with: "﹢", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
-    private lazy var buttonEqually = createButton(with: "﹦", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons, multiplier: 1)
+    private lazy var buttonDivision = createButton(with: Strings.dividir, backgroundColor: .systemOrange)
+    private lazy var buttonMultiplication = createButton(with: Strings.multiply, backgroundColor: .systemOrange)
+    private lazy var buttonSubtraction = createButton(with: Strings.minus, backgroundColor: .systemOrange)
+    private lazy var buttonPlus = createButton(with: Strings.plus, backgroundColor: .systemOrange)
+    private lazy var buttonEqually = createButton(with: Strings.equal, backgroundColor: .systemOrange)
     
-    private lazy var buttonProcent = createButton(with: "％", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2, multiplier: 1)
-    private lazy var buttonNine = createButton(with: "9", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonSix = createButton(with: "6", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonThree = createButton(with: "3", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonComma = createButton(with: ",", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonProcent = createButton(with: Strings.percent, titleColor: .black, backgroundColor: .systemGray5)
+    private lazy var buttonNine = createButton(with: Strings.nine)
+    private lazy var buttonSix = createButton(with: Strings.six)
+    private lazy var buttonThree = createButton(with: Strings.three)
+    private lazy var buttonComma = createButton(with: Strings.separator)
     
-    private lazy var buttonPlusAndMinus = createButton(with: "+/-", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2, multiplier: 1)
-    private lazy var buttonEight = createButton(with: "8", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonFive = createButton(with: "5", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonTwo = createButton(with: "2", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonZero = createButton(with: "0", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 2.2)
+    private lazy var buttonPlusAndMinus = createButton(with: Strings.plusMinus, titleColor: .black, backgroundColor: .systemGray5)
+    private lazy var buttonEight = createButton(with: Strings.eight)
+    private lazy var buttonFive = createButton(with: Strings.five)
+    private lazy var buttonTwo = createButton(with: Strings.two)
+    private lazy var buttonZero = createButton(with: Strings.zero, multiplier: 2.2)
     
-    private lazy var buttonC = createButton(with: "C", titleColor: Color.titleColorButton2, backgroundColor: Color.backgroundColorButtons2, multiplier: 1)
-    private lazy var buttonSeven = createButton(with: "7", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonFour = createButton(with: "4", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
-    private lazy var buttonOne = createButton(with: "1", titleColor: Color.titleColorButton, backgroundColor: Color.backgroundColorButtons3, multiplier: 1)
+    private lazy var buttonC = createButton(with: Strings.clear, titleColor: .black, backgroundColor: .systemGray5)
+    private lazy var buttonSeven = createButton(with: Strings.seven)
+    private lazy var buttonFour = createButton(with: Strings.four)
+    private lazy var buttonOne = createButton(with: Strings.one)
     
     private lazy var centerY: CGFloat = {
-        view.frame.height/2
+        view.frame.height / 2
     }()
-  
+
     lazy var buttonWeidht = {
-        view.frame.width/4 - 10
+        view.frame.width / 4 - 10
     }()
 
     // MARK: - LifeCycle
@@ -55,14 +55,8 @@ class VCConstaintsInCode: UIViewController {
         setupHierarchy()
         setupLayout()
         setupView()
-       
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-       
-       
-    }
-    
+
     // MARK: - Settings
     
     private func setupHierarchy() {
@@ -174,43 +168,63 @@ class VCConstaintsInCode: UIViewController {
     }
     
     private func setupView() {
-        view.backgroundColor = Color.backgroundColor
+        view.backgroundColor = .black
     }
-
-
 }
-private func createButton(with title: String, titleColor: UIColor, backgroundColor: UIColor, multiplier: CGFloat) -> UIButton {
+private func createButton(with title: String,
+                          titleColor: UIColor = .white,
+                          backgroundColor: UIColor = .darkGray,
+                          multiplier: CGFloat = 1) -> UIButton {
+
     let button = UIButton(type: .system)
+
     button.setTitle(title, for: .normal)
     button.setTitleColor(titleColor, for: .normal)
     button.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
+
     button.backgroundColor = backgroundColor
+
     button.layer.masksToBounds = true
     button.layer.cornerRadius = 30
-    button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: multiplier).isActive = true
+
+    button.widthAnchor.constraint(
+        equalTo: button.heightAnchor,
+        multiplier: multiplier
+    ).isActive = true
+
     return button
 }
 
-    // MARK:  - Extension
+// MARK:  - Extension
 extension VCConstaintsInCode {
     enum Metric {
         static let labelFontSize: CGFloat = 60
     }
     enum Strings {
-        static let labelText = "0"
+        static let one = "1"
+        static let two = "2"
+        static let three = "3"
+        static let four = "4"
+        static let five = "5"
+        static let six = "6"
+        static let seven = "7"
+        static let eight = "8"
+        static let nine = "9"
+        static let zero = "0"
+        static let plus = "+"
+        static let minus = "-"
+        static let equal = "="
+        static let plusMinus = "+/-"
+        static let separator = ","
+        static let clear = "C"
+        static let multiply = "X"
+        static let dividir = "/"
+        static let percent = "%"
     }
-    enum Color {
-        static let backgroundColor: UIColor = .black
-        static let labelTextColor: UIColor = .white
-        static let titleColorButton: UIColor = .white
-        static let titleColorButton2: UIColor = .black
-        static let backgroundColorButtons: UIColor = .systemOrange
-        static let backgroundColorButtons2: UIColor = .systemGray5
-        static let backgroundColorButtons3: UIColor = .darkGray
-    }
+
     enum Constraints {
         static let start: CGFloat = -50
         static let labelXAnchor = -30
-     
+
     }
 }
